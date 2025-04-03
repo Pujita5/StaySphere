@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>StaySphere</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/0d3faf735c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav id="navBar" class="navbar-white">
+        <a href="index.html">
+            <img src="img/logo-black.png" class="logo" alt="StaySphere Logo" />
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Popular Destinations</a></li>
+            <li><a href="listing.html">Special Listings</a></li>
+            <li><a href="house.html" class="active">Featured Home</a></li>
+        </ul>
+        <a href="#" class="register-btn">Register Now</a>
+        <i class="fa-solid fa-bars" onclick="togglebtn()"></i>
+    </nav>
+    
+    <div class="house-details">
+        <div class="house-title">
+            <h1>Aarya Luxe</h1>
+            <div class="row">
+                <div>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <span>245 Reviews</span>
+                </div>
+                <div>
+                    <p>Location: Bangalore, Karnataka - India</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="gallery">
+            <div class="gallery-img-1">
+                <img src="img/house-1.png" alt="Main House Image" id="bigImg" />
+            </div>
+            <div><img src="img/house-2.png" alt="House Image 2" class="small-img" /></div>
+            <div><img src="img/house-3.png" alt="House Image 3" class="small-img" /></div>
+            <div><img src="img/house-4.png" alt="House Image 4" class="small-img" /></div>
+            <div><img src="img/house-5.png" alt="House Image 5" class="small-img" /></div>
+        </div>
+        <!-- 360 Degree Video Section -->
+         <h3>Explore the 360° View</h3>
+         <iframe 
+            src="https://my.matterport.com/show/?m=4ZXi8ddgR5i&play=1" 
+            width="100%" 
+            height="500" 
+            frameborder="0" 
+            allowfullscreen>
+         </iframe>
+
+        
+        <div class="small-details">
+            <h2>Entire rental unit hosted by Aarya</h2>
+            <p>2 guests &nbsp; &nbsp; 2 beds &nbsp; &nbsp; 1 bathroom</p>
+            <h4>4500 Rs / Day</h4>
+        </div>
+        <hr class="line" />
+        
+        <form class="check-form">
+            <div>
+                <label>Check-in</label>
+                <input type="text" placeholder="Add date" />
+            </div>
+            <div>
+                <label>Check-out</label>
+                <input type="text" placeholder="Add date" />
+            </div>
+            <div class="guest-field">
+                <label>Guest</label>
+                <input type="text" placeholder="2 guests" />
+            </div>
+            <button type="submit">Check Availability</button>
+        </form>
+        
+        <ul class="details-list">
+            <li><i class="fa-solid fa-house-user"></i> Private Rental <span>Entire flat for yourself.</span></li>
+            <li><i class="fa-solid fa-hand-sparkles"></i> Spotless <span>Meets high hygiene standards.</span></li>
+            <li><i class="fa-solid fa-location-dot"></i> Great Location <span>Highly rated by guests.</span></li>
+            <li><i class="fa-solid fa-key"></i> Quick & Easy Check-in <span>Highly rated check-in experience.</span></li>
+        </ul>
+        <hr class="line" />
+        
+        <p class="home-desc">A luxurious and comfortable homestay designed for a relaxing experience. Enjoy top-notch amenities and a prime location.</p>
+        <hr class="line" />
+        
+        <div class="host">
+            <img src="img/host.png" alt="Host Image" />
+            <div>
+                <h2>Hosted by Aarya</h2>
+                <p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    &nbsp; 245 Reviews &nbsp; Response Rate: 100% &nbsp; Response Time: 63 min
+                </p>
+            </div>
+        </div>
+        <a href="#" class="contact-host">Contact Host</a>
+    </div>
+    
+    <script>
+        function togglebtn() {
+            document.getElementById('navBar').classList.toggle('hidemenu');
+        }
+        
+        const bigImg = document.getElementById('bigImg');
+        const smallImg = document.getElementsByClassName('small-img');
+        
+        for (let i = 0; i < smallImg.length; i++) {
+            smallImg[i].onclick = function () {
+                bigImg.src = smallImg[i].src;
+            };
+        }
+    </script>
+</body>
+</html>
